@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150507024841) do
+ActiveRecord::Schema.define(version: 20150507034214) do
 
   create_table "cuisines", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 20150507024841) do
     t.text     "prodecure",          limit: 65535
     t.datetime "created_at",                       null: false
     t.datetime "updated_at",                       null: false
+    t.string   "servings",           limit: 255
   end
 
   add_index "recipes", ["cuisine_id"], name: "index_recipes_on_cuisine_id", using: :btree
