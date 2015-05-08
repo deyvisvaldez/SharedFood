@@ -5,7 +5,15 @@ class RecipesController < ApplicationController
   # GET /recipes
   # GET /recipes.json
   def index
-    @recipes = Recipe.all
+    if params[:food_preference_id]
+      @recipes = Recipe.where(food_preference_id: params[:food_preference_id])
+    elsif params[:food_type_id]
+      @recipes = Recipe.where(food_type_id: params[:food_type_id])
+    elsif params[:cuisine_id]
+      @recipes = Recipe.where(cuisine_id: params[:cuisine_id])
+    else
+      @recipes = Recipe.all
+    end
   end
 
   # GET /recipes/1

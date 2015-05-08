@@ -4,4 +4,5 @@ class Recipe < ActiveRecord::Base
   belongs_to :cuisine
 
   DIFFICULTY = %w(Easy Medium Hard)
+
 end
