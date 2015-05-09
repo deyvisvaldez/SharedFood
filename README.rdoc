@@ -1,3 +1,3 @@
-== README
+== Shared Food
 
 Site where users can share food recipes
